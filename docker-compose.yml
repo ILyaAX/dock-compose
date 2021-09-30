@@ -1,0 +1,16 @@
+---
+version: '3.2'
+
+services:
+  prod:
+    image: tomcat:latest
+    ports:
+      - "80:8080"
+    volumes:
+      - ./app:/usr/local/tomcat/webapps/
+
+  build_app:
+    build:
+      context: ./
+    volumes:
+      ./app:/root/work/boxfuse-sample-java-war-hello/target/
