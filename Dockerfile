@@ -1,6 +1,5 @@
 FROM maven
 WORKDIR /home
-RUN /bin/bash
-RUN apt update
-RUN apt install git
+RUN apk update
+RUN apk add git
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
