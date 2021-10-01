@@ -13,6 +13,7 @@ services:
 
   build_app:
     build:
+      context: ./
       dockerfile: Dockerfile
     volumes:
       - type: volume
