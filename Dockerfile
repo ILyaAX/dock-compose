@@ -1,4 +1,4 @@
-FROM maven:latest-alpine
+FROM maven
 WORKDIR /home
 RUN /bin/bash
 RUN apt update
