@@ -8,7 +8,7 @@ services:
       - "80:8080"
     volumes:
       - type: volume
-        source: app
+        source: ./app
         target: /opt/tomcat/webapps
 
   build_app:
@@ -17,7 +17,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - type: volume
-        source: app
+        source: ./app
         target: /home/boxfuse-sample-java-war-hello/target
 
 volumes:
