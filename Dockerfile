@@ -1,4 +1,4 @@
-FROM maven:3.8.2-ibmjava-8-alpine
+FROM maven:latest-alpine
 WORKDIR /home
 RUN apt update
 RUN apt install git
