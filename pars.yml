@@ -1,0 +1,19 @@
+firm: dream
+  department:1
+    employee:
+      - buh:Olya
+      - buh:Olya
+      - buh:Olya
+      - buh:Olya
+  department:2
+    employee:
+      - lowyer:Roman
+      - lowyer:Roman
+      - lowyer:Roman
+      - lowyer:Roman
+  department:3
+    employee:
+      - lowyer:Olya
+  department:4
+  department:5
+  department:6

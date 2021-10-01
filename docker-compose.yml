@@ -1,16 +1,23 @@
 ---
-version: '3.2'
+version: '3.7'
 
 services:
-  prod:
-    image: tomcat:latest
+  webapp:
+    image: davidcaste/docker-alpine-tomcat:jdk7tomcat7
     ports:
       - "80:8080"
     volumes:
-      - ./app:/usr/local/tomcat/webapps/
+      - type: volume
+        source: app
+        target: /opt/tomcat/webapps
 
   build_app:
     build:
-      context: ./
+      dockerfile: Dockerfile
     volumes:
-      ./app:/root/work/boxfuse-sample-java-war-hello/target/
+      - type: volume
+        source: app
+        target: /home/boxfuse-sample-java-war-hello/target
+
+volumes:
+  app:
