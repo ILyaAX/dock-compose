@@ -3,7 +3,7 @@ version: '3.7'
 
 services:
   webapp:
-    image: davidcaste/docker-alpine-tomcat:jdk7tomcat7
+    image: davidcaste/docker-alpine-tomcat:latest
     ports:
       - "80:8080"
     volumes:
