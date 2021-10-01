@@ -18,7 +18,7 @@ services:
     volumes:
       - type: volume
         source: ./app
-        target: /home/boxfuse-sample-java-war-hello/target
+        target: /usr/src/mymaven/boxfuse-sample-java-war-hello/target
 
 volumes:
   app:
