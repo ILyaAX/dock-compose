@@ -3,13 +3,13 @@ version: '3.7'
 
 services:
   webapp:
-    image: davidcaste/docker-alpine-tomcat:latest
+    image: tomcat:8.0-alpine
     ports:
       - "80:8080"
     volumes:
       - type: volume
         source: ./app
-        target: /opt/tomcat/webapps
+        target: /usr/local/tomcat/webapps
 
   build_app:
     build:
