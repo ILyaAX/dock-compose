@@ -9,7 +9,7 @@ services:
       - type: volume
         source: ./app
         target: /home/target
-webapp:
+  webapp:
     image: tomcat:8.0-alpine
     ports:
       - "80:8080"
