@@ -3,6 +3,7 @@ version: '3.7'
 services:
   webapp:
     image: tomcat:8.0-alpine
+    container_name: web_app
     ports:
       - "80:8080"
     volumes:
@@ -12,6 +13,7 @@ services:
 
   build_app:
     build:
+      container_name: build_app
       context: ./
       dockerfile: Dockerfile
     volumes:
@@ -19,5 +21,5 @@ services:
         source: ./app/
         target: /home/target/
 
-volumes:
-  app:
+#volumes:
+#  app:
