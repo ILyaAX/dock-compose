@@ -7,8 +7,8 @@ services:
       - "80:8080"
     volumes:
       - type: volume
-        source: ./app
-        target: /usr/local/tomcat/webapps
+        source: ./app/
+        target: /usr/local/tomcat/webapps/
 
   build_app:
     build:
@@ -16,7 +16,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - type: volume
-        source: ./app
+        source: ./app/
         target: /home/target/
 
 volumes:
