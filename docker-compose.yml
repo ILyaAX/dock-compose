@@ -1,15 +1,7 @@
 version: '3.7'
 
 services:
-  webapp:
-    image: tomcat:8.0-alpine
-    ports:
-      - "80:8080"
-    volumes:
-      - type: volume
-        source: ./app
-        target: /usr/local/tomcat/webapps
-
+  
   build_app:
     build:
       context: ./
@@ -18,6 +10,15 @@ services:
       - type: volume
         source: ./app
         target: /home/target
+
+webapp:
+    image: tomcat:8.0-alpine
+    ports:
+      - "80:8080"
+    volumes:
+      - type: volume
+        source: ./app
+        target: /usr/local/tomcat/webapps
 
 volumes:
   app:
