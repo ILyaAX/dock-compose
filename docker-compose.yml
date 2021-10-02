@@ -6,16 +6,12 @@ services:
       context: ./
       dockerfile: Dockerfile
     volumes:
-      - type: volume
-        source: app
-        target: /home/target
+      - ./app:/home/target
   webapp:
     image: tomcat:8.0-alpine
     ports:
       - "80:8080"
     volumes:
-      - type: volume
-        source: app
-        target: /usr/local/tomcat/webapps
+      - ./app:/usr/local/tomcat/webapps
 volumes:
   app:
