@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - type: volume
-        source: ./app
+        source: app
         target: /home/target
   webapp:
     image: tomcat:8.0-alpine
@@ -15,7 +15,7 @@ services:
       - "80:8080"
     volumes:
       - type: volume
-        source: ./app
+        source: app
         target: /usr/local/tomcat/webapps
 volumes:
   app:
